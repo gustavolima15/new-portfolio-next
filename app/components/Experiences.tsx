@@ -188,7 +188,7 @@ export default function Experiences() {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <a
-            href="/Currículo_Gustavo_Lima (1).pdf"
+            href="/Curriculo_Gustavo_Lima.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
