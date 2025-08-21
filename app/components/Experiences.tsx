@@ -18,7 +18,7 @@ export default function Experiences() {
       company: "Tech Girls",
       location: "Remoto",
       period: "Fev 2024 - Jul 2024",
-      type: "freelance",
+      type: "remote",
       description: "Desenvolvedor na plataforma educacional da Tech Girls, implementando uma funcionalidade de registro de presença de alunos em um ambiente WordPress.",
       technologies: ["HTML5", "CSS3", "JavaScript", "WordPress", "Figma"]
     },
