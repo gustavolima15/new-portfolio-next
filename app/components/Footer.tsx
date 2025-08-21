@@ -1,4 +1,4 @@
-import { Github, Linkedin, MessageCircle, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,19 +7,19 @@ export default function Footer() {
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/gustavo-lima',
+      url: 'https://github.com/gustavolima15',
       color: 'hover:text-gray-700 dark:hover:text-gray-300'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/gustavo-lima',
+      url: 'https://www.linkedin.com/in/gustavo-lima15/',
       color: 'hover:text-blue-600'
     },
     {
-      name: 'WhatsApp',
-      icon: MessageCircle,
-      url: 'https://wa.me/5511999999999',
+      name: 'Email',
+      icon: Mail,
+      url: 'mailto:gustavolimamendes2@gmail.com',
       color: 'hover:text-green-500'
     }
   ];
@@ -32,8 +32,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Gustavo Lima Mendes</h3>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Desenvolvedor Full-stack apaixonado por criar soluções inovadoras e 
-              interfaces que conectam pessoas e simplificam processos.
+              Eu construo soluções digitais inovadoras e impactantes, unindo design e desenvolvimento para criar experiências únicas.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => {
@@ -93,20 +92,17 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-400" />
                 <a 
-                  href="mailto:gustavo@email.com" 
+                  href="mailto:gustavo.lima.dev@gmail.com" 
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  gustavo@email.com
+                  gustavolimamendes2@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-green-400" />
-                <a 
-                  href="tel:+5511999999999" 
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  +55 (11) 99999-9999
-                </a>
+                <span className="text-gray-300">
+                  (+55) 74 99108-7419
+                </span>
               </li>
             </ul>
           </div>

@@ -35,7 +35,7 @@ export default function Hero() {
             
             <AnimateOnScroll animation="fadeInUp" delay={400}>
               <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
-                Eu construo soluções para web
+                Eu construo soluções digitais inovadoras e impactantes, unindo design e desenvolvimento para criar experiências únicas.
               </p>
             </AnimateOnScroll>
             
@@ -65,7 +65,7 @@ export default function Hero() {
             <AnimateOnScroll animation="fadeInUp" delay={800}>
               <div className="flex items-center justify-center lg:justify-start gap-6">
                 <a
-                  href="https://github.com/gustavo-lima"
+                  href="https://github.com/gustavolima15"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -74,7 +74,7 @@ export default function Hero() {
                   <Github className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" size={24} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/gustavo-lima"
+                  href="https://www.linkedin.com/in/gustavo-lima15/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -83,11 +83,9 @@ export default function Hero() {
                   <Linkedin className="text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" size={24} />
                 </a>
                 <a
-                  href="https://wa.me/5511999999999"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:gustavo.lima.dev@gmail.com"
                   className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-                  aria-label="WhatsApp"
+                  aria-label="Email"
                 >
                   <MessageCircle className="text-gray-600 dark:text-gray-400 group-hover:text-green-500 dark:group-hover:text-green-400 transition-colors duration-200" size={24} />
                 </a>
@@ -105,15 +103,13 @@ export default function Hero() {
                     alt="Gustavo Lima Mendes"
                     width={320}
                     height={320}
-                    className="w-full h-full"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                {/* Elementos decorativos */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-500 rounded-full opacity-20 animate-pulse group-hover:opacity-40 transition-opacity duration-300"></div>
-                <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse delay-1000 group-hover:opacity-40 transition-opacity duration-300"></div>
                 
-                {/* Anel de progresso decorativo */}
-                <div className="absolute inset-0 rounded-full border-2 border-transparent bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-spin-slow"></div>
+                {/* Elementos decorativos sutis */}
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full opacity-10 animate-pulse group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-blue-500 rounded-full opacity-10 animate-pulse delay-1000 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
             </AnimateOnScroll>
           </div>

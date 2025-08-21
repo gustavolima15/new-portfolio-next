@@ -5,19 +5,19 @@ export default function About() {
   const stats = [
     {
       icon: Code,
-      number: "8+",
+      number: "2+",
       label: "Anos de Experiência",
       color: "text-blue-600"
     },
     {
       icon: Award,
-      number: "50+",
+      number: "15+",
       label: "Projetos Concluídos",
       color: "text-green-600"
     },
     {
       icon: Users,
-      number: "15+",
+      number: "10+",
       label: "Tecnologias",
       color: "text-purple-600"
     }
@@ -38,23 +38,18 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <AnimateOnScroll animation="fadeInUp" delay={200}>
             <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6">
-              <p className="text-center lg:text-left">
-                Sou formado em Sistemas de Informação e tenho um MBA em Gestão de Projetos. Sempre fui 
-                apaixonado por tecnologia e as coisas que existe por aí me atraem muito. No curso de 
-                informática, descobri a área de desenvolvimento de software, especialmente na área de Front-end.
+              <p className="text-center lg:text-justify">
+                Sou Desenvolvedor Full Stack com experiência em Node.js, Java, Angular, Vue.js e React Native, além de atuação em UI/UX Design. Já trabalhei em projetos inovadores no setor jurídico, educacional e corporativo, aplicando boas práticas de versionamento, metodologias ágeis e integração com sistemas legados.
               </p>
-              
-              <p className="text-center lg:text-left">
-                Com mais de 8 anos de experiência trabalhando com tecnologias como PHP, Laravel, Vue, React, 
-                .Net, Solidity e outras. Sempre busquei me manter em integração das mais diversas áreas da 
-                programação. Em sistemas no qual possibilitar agilidade e segurança, como também suas 
-                integrações para uso e monitoramento, criação de soluções inteligentes e inovadoras, sempre 
-                buscando criar aplicações que sejam intuitivas, eficientes e de alto valor agregado.
+
+              <p className="text-center lg:text-justify">
+                Também tenho experiência com prototipagem no Figma, design de interfaces modernas e acessíveis, sempre buscando melhorar a experiência do usuário. Tenho perfil colaborativo, raciocínio lógico apurado e busco constantemente desafios que gerem impacto real.
               </p>
-              
-              <p className="text-center lg:text-left">
-                Acredito que a tecnologia deve conectar pessoas, e é isso que me motiva a continuar 
-                aprendendo e entregando novas soluções todos os dias.
+
+              <p className="text-center lg:text-justify">
+                Atualmente atuo como Desenvolvedor Full Stack, focando em criar soluções que combinam performance,
+                usabilidade e código limpo. Acredito que a tecnologia deve facilitar a vida das pessoas e é isso que 
+                me motiva a continuar evoluindo profissionalmente.
               </p>
             </div>
           </AnimateOnScroll>

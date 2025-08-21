@@ -12,82 +12,86 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Balandro Mobile",
-      description: "Aplicativo mobile desenvolvido para facilitar o gerenciamento e controle de embarcações. Interface moderna e intuitiva com funcionalidades completas.",
-      image: "/project-balandro.jpg",
-      technologies: ["React Native", "TypeScript", "Firebase"],
-      liveUrl: "https://balandro-app.com",
-      githubUrl: "https://github.com/gustavo-lima/balandro-mobile",
+      title: "Automação SISBAJUD",
+      description: "Solução fullstack para automatizar o processo de cadastro de bloqueios judiciais. A aplicação foi implementada integrando-se com interfaces web da Justiça Federal.",
+      image: "/automacao-sibajud.jpg",
+      technologies: ["TypeScript", "Vue.js", "Node.js", "Express", "Jest"],
+      liveUrl: "https://github.com/gustavo-lima-mendes",
+      githubUrl: "https://github.com/gustavo-lima-mendes",
       featured: true,
-      category: "mobile",
-      stars: 45
+      category: ["web", "backend"],
     },
     {
       id: 2,
-      title: "DATEN",
-      description: "Sistema de análise de dados e dashboard interativo. Processamento de grandes volumes de dados com visualizações em tempo real.",
-      image: "/project-daten.jpg",
-      technologies: ["Next.js", "Python", "PostgreSQL", "Chart.js"],
-      liveUrl: "https://daten-analytics.com",
-      githubUrl: "https://github.com/gustavo-lima/daten",
+      title: "Me Filma!",
+      description: "Aplicativo em desenvolvimento para captura e organização de lances esportivos (futebol, futsal, sinuca, futvôlei e outros).",
+      image: "/MEFILMA.jpeg",
+      technologies: ["Node.js", "TypeScript", "React Native", "MySQL", "Nest.js", "Figma", "Jest", "Docker", "ESP32"],
+      liveUrl: "https://github.com/gustavo-lima-mendes",
+      githubUrl: "https://github.com/gustavo-lima-mendes",
       featured: true,
-      category: "web",
-      stars: 67
+      category: ["mobile", "backend"],
     },
     {
       id: 3,
-      title: "Amara NEO",
-      description: "Plataforma de e-commerce moderna com foco em performance e experiência do usuário. Sistema completo de gestão de produtos e vendas.",
-      image: "/project-amara.jpg",
-      technologies: ["Vue.js", "Laravel", "MySQL", "Tailwind CSS"],
-      liveUrl: "https://amara-neo.com",
-      githubUrl: "https://github.com/gustavo-lima/amara-neo",
+      title: "ÓiaFia! - LP + Dashboard",
+      description: "Sistema de gerenciamento de coleta de azeite de dendê para ser utilizado na fabricação de sabonetes.",
+      image: "/cover.png",
+      technologies: ["Figma", "React", "Express", "MySQL", "Jest"],
+      liveUrl: "https://github.com/gustavo-lima-mendes",
+      githubUrl: "https://github.com/gustavo-lima-mendes",
       featured: true,
-      category: "web",
-      stars: 89
+      category: ["web", "backend"],
     },
     {
       id: 4,
-      title: "Portfolio Dashboard",
-      description: "Dashboard administrativo para gerenciamento de portfólio pessoal com métricas de performance e analytics.",
-      image: "/project-dashboard.jpg",
-      technologies: ["React", "Node.js", "MongoDB"],
-      liveUrl: "https://portfolio-dashboard.com",
-      githubUrl: "https://github.com/gustavo-lima/portfolio-dashboard",
+      title: "Consulta de Processos - TRF1",
+      description: "Automação de consulta de processos judiciais em aguardo de pagamento de precatória e RPV.",
+      image: "/project-agenda.jpg",
+      technologies: ["Vue.js", "Node.js", "TypeScript", "Express", "Puppeteer", "Jest", "Docker", "CI/CD"],
+      liveUrl: "https://github.com/gustavo-lima-mendes",
+      githubUrl: "https://github.com/gustavo-lima-mendes",
       featured: false,
-      category: "web",
-      stars: 23
+      category: ["web", "backend"],
     },
     {
       id: 5,
-      title: "API Gateway",
-      description: "Sistema de gateway de APIs com autenticação, rate limiting e monitoramento em tempo real.",
-      image: "/project-api.jpg",
-      technologies: [".NET", "Redis", "Docker"],
-      liveUrl: "https://api-gateway.com",
-      githubUrl: "https://github.com/gustavo-lima/api-gateway",
+      title: "Tech Girls",
+      description: "Implementação de um sistema de registro de Frequência de alunos em cursos de tecnologia.",
+      image: "/project-dashboard.jpg",
+      technologies: ["JavaScript", "HTML", "CSS", "Node.js", "Wordpress"],
+      liveUrl: "https://github.com/gustavo-lima-mendes",
+      githubUrl: "https://github.com/gustavo-lima-mendes",
       featured: false,
-      category: "backend",
-      stars: 34
+      category: "web",
     },
     {
       id: 6,
-      title: "Chat Application",
-      description: "Aplicação de chat em tempo real com suporte a múltiplas salas e compartilhamento de arquivos.",
-      image: "/project-chat.jpg",
-      technologies: ["Socket.io", "Express", "React"],
-      liveUrl: "https://chat-app.com",
-      githubUrl: "https://github.com/gustavo-lima/chat-app",
+      title: "Vaga Certa",
+      description: "Aplicativo destinado a facilitar o processo de busca de vagas de emprego, com funcionalidades de cadastro, busca e filtro de vagas.",
+      image: "/project-api.jpg",
+      technologies: ["React Native", "Expo Go", "JWT", "MySQL", "Swagger", "Node.js", "Express"],
+      liveUrl: "https://github.com/gustavo-lima-mendes",
+      githubUrl: "https://github.com/gustavo-lima-mendes",
       featured: false,
-      category: "web",
-      stars: 56
-    }
+      category: ["mobile", "backend"],
+
+    },
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
   const filteredProjects = filter === 'all' 
     ? projects.filter(project => !project.featured)
-    : projects.filter(project => !project.featured && project.category === filter);
+    : projects.filter(project => {
+        if (project.featured) return false;
+        
+        // Se category é um array, verifica se contém o filtro
+        if (Array.isArray(project.category)) {
+          return project.category.includes(filter);
+        }
+        // Se category é uma string, compara diretamente
+        return project.category === filter;
+      });
 
   const categories = [
     { id: 'all', label: 'Todos' },
@@ -132,7 +136,6 @@ export default function Projects() {
                     />
                     <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded-full text-xs flex items-center gap-1">
                       <Star size={12} />
-                      {project.stars}
                     </div>
                   </div>
                   
@@ -156,7 +159,7 @@ export default function Projects() {
                       ))}
                     </div>
                     
-                    <div className="flex gap-3">
+                    {/* <div className="flex gap-3">
                       <Button
                         href={project.liveUrl}
                         variant="primary"
@@ -179,7 +182,7 @@ export default function Projects() {
                         <Github size={16} />
                         Código
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -226,7 +229,6 @@ export default function Projects() {
                     </h4>
                     <div className="flex items-center gap-1 text-gray-500 text-xs">
                       <Star size={12} />
-                      {project.stars}
                     </div>
                   </div>
                   
@@ -244,8 +246,7 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  
-                  <div className="flex gap-4">
+                  {/* <div className="flex gap-4">
                     <Button
                       href={project.liveUrl}
                       variant="ghost"
@@ -266,7 +267,8 @@ export default function Projects() {
                       <Github size={14} />
                       Code
                     </Button>
-                  </div>
+                  </div>  */}
+                 
                 </div>
               </AnimateOnScroll>
             ))}
@@ -285,9 +287,11 @@ export default function Projects() {
                   Vamos conversar sobre como posso ajudar no seu próximo projeto!
                 </p>
                 <Button
-                  href="#contact"
+                  href="https://wa.me/5574991087419"
                   variant="secondary"
                   size="lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-blue-600 hover:bg-gray-100"
                 >
                   Entrar em Contato
