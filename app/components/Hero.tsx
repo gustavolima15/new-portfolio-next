@@ -101,7 +101,7 @@ export default function Hero() {
               <div className="relative group">
                 <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl group-hover:shadow-3xl transition-all duration-300 group-hover:scale-105">
                   <ImageWithFallback
-                    src="/profile-photo.jpg"
+                    src="/profile-photo.png"
                     alt="Gustavo Lima Mendes"
                     width={320}
                     height={320}
